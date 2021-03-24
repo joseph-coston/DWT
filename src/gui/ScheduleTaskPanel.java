@@ -74,7 +74,6 @@ public class ScheduleTaskPanel extends JPanel {
 		JLabel lblTaskState = new JLabel();
 		lblTaskState.setHorizontalAlignment(SwingConstants.RIGHT);
 		springLayout.putConstraint(SpringLayout.NORTH, lblTaskState, 0, SpringLayout.NORTH, lblTaskName);
-		springLayout.putConstraint(SpringLayout.WEST, lblTaskState, 143, SpringLayout.EAST, lblTaskName);
 		
 		lblTaskState.setText("Not Completed");
 		if (this.isCompleted) {
@@ -83,6 +82,8 @@ public class ScheduleTaskPanel extends JPanel {
 		add(lblTaskState);
 		
 		JLabel lblStartTime = new JLabel(startTime);
+		springLayout.putConstraint(SpringLayout.WEST, lblTaskState, -118, SpringLayout.WEST, lblStartTime);
+		springLayout.putConstraint(SpringLayout.EAST, lblTaskState, -13, SpringLayout.WEST, lblStartTime);
 		springLayout.putConstraint(SpringLayout.NORTH, lblStartTime, 0, SpringLayout.NORTH, lblTaskName);
 		springLayout.putConstraint(SpringLayout.EAST, lblStartTime, -10, SpringLayout.EAST, this);
 		add(lblStartTime);

@@ -19,16 +19,7 @@ public class DeepWorkTracker {
 	
 	/** constructor definitions **/
 	public DeepWorkTracker() {
-		taskDays = new HashMap<LocalDate, TaskObserver>();
-		
-		TaskObserver newTaskDay = addTaskObserver(LocalDate.now());
-		
-		// TODO: remove
-		newTaskDay.addTask(new DeepTask());
-		newTaskDay.addTask(new DeepTask());
-		newTaskDay.addTask(new DeepTask());
-		newTaskDay.addTask(new DeepTask());
-		
+		taskDays = new HashMap<LocalDate, TaskObserver>();		
 	}
 	
 	/** method definitions **/
