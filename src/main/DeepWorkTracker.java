@@ -22,6 +22,8 @@ public class DeepWorkTracker {
 		taskDays = new HashMap<LocalDate, TaskObserver>();
 		
 		TaskObserver newTaskDay = addTaskObserver(LocalDate.now());
+		
+		// TODO: remove
 		newTaskDay.addTask(new DeepTask());
 		newTaskDay.addTask(new DeepTask());
 		newTaskDay.addTask(new DeepTask());

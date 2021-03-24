@@ -21,6 +21,23 @@ public class TaskObserver {
 		tasks.add(t);
 	}
 	
+	public void addTask(String taskType, String title, String description, LocalTime start, LocalTime end) {
+		switch (taskType) {
+			case "Shallow":
+				tasks.add(new ShallowTask(title, description, start, end));
+			break;
+			case "Deep":
+				tasks.add(new DeepTask(title, description, start, end));
+			break;
+			case "Break":
+				tasks.add(new Break(title, description, start, end));
+			break;	
+			default:
+				System.out.println("Invalid taskType.");
+			break;
+		}
+	}
+	
 	public Task getTaskIndex(int i) {
 		return tasks.get(i);
 	}

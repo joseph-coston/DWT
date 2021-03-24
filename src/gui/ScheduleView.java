@@ -2,6 +2,7 @@ package gui;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 
 import java.awt.event.ActionListener;
@@ -49,10 +50,18 @@ public class ScheduleView extends JPanel {
 		setLayout(springLayout);
 		
 		// add "add task" button
+	
 		JButton btnAddTask = new JButton("Add Task");
 		springLayout.putConstraint(SpringLayout.WEST, btnAddTask, 10, SpringLayout.WEST, this);
 		btnAddTask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				try {	
+					ScheduleAddTask dialog = new ScheduleAddTask((ScheduleView) btnAddTask.getParent());
+					dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+					dialog.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 		

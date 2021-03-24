@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 
 import com.formdev.flatlaf.FlatDarkLaf;
 
+import main.DeepWorkTracker;
 import taskData.Task;
 import taskData.TaskObserver;
 
@@ -40,44 +41,17 @@ public class ScheduleAddTask extends JDialog {
 	private final JPanel panel = new JPanel();
 	private JLabel lblTaskType;
 	private JTextField textFieldTitle;
-	
-	private static TaskObserver taskDay;
+	private JTextArea textAreaDescription;
 	private static JLabel lblTaskStart;
 	private static JLabel lblTaskEnd;
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		// apply look and feel (LAF)
-		try {
-		    UIManager.setLookAndFeel( new FlatDarkLaf() );
-		    
-		    // remove rounding
-		    UIManager.put( "Button.arc", 0 );
-		    UIManager.put( "Component.arc", 0 );
-		    UIManager.put( "ProgressBar.arc", 0 );
-		    UIManager.put( "TextComponent.arc", 0 );
-		    
-		    // add highlighting
-		   // UIManager.put( "TabbedPane.selectedBackground", Color.white );
-		} catch( Exception ex ) {
-		    System.err.println( "Failed to initialize LaF" );
-		}
-		
-		try {
-			ScheduleAddTask dialog = new ScheduleAddTask(new TaskObserver(LocalDate.now()));
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+	
+	private static ScheduleView creator;
 
 	/**
 	 * Create the dialog.
 	 */
-	public ScheduleAddTask(TaskObserver observer) {
-		this.taskDay = observer;
+	public ScheduleAddTask(ScheduleView creator) {
+		this.creator = creator;
 		makeGUI();
 	}
 	
@@ -103,6 +77,7 @@ public class ScheduleAddTask extends JDialog {
 		JSpinner startTimeSpinner = new JSpinner(new SpinnerDateModel());
 		JSpinner.DateEditor timeEditor = new JSpinner.DateEditor(startTimeSpinner, "HH:mm");
 		startTimeSpinner.setEditor(timeEditor);
+		
 		startTimeSpinner.setValue(new Date());
 		contentPanel.add(startTimeSpinner);
 		
@@ -112,7 +87,11 @@ public class ScheduleAddTask extends JDialog {
 		JSpinner endTimeSpinner = new JSpinner(new SpinnerDateModel());
 		JSpinner.DateEditor timeEditor2 = new JSpinner.DateEditor(endTimeSpinner, "HH:mm");
 		endTimeSpinner.setEditor(timeEditor2);
-		endTimeSpinner.setValue(new Date());
+		
+		Date defaultEndDate = new Date();
+		defaultEndDate.setHours(defaultEndDate.getHours()+1);
+		endTimeSpinner.setValue(defaultEndDate);
+		
 		contentPanel.add(endTimeSpinner);
 	
 		
@@ -127,7 +106,7 @@ public class ScheduleAddTask extends JDialog {
 		JLabel lblTaskTitle_1 = new JLabel("Task Description");
 		contentPanel.add(lblTaskTitle_1);
 		
-		JTextArea textAreaDescription = new JTextArea();
+		textAreaDescription = new JTextArea();
 		textAreaDescription.setText("Insert description here");
 		contentPanel.add(textAreaDescription);
 		{
@@ -138,11 +117,18 @@ public class ScheduleAddTask extends JDialog {
 				JButton okButton = new JButton("OK");
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						{
-							// TODO: create task object, add to DWT
-							// TODO; validate task input, make sure no collisions
-							// taskDay.add
-						}
+						// feed form data to addTask method
+						TaskObserver taskDay = DeepWorkTracker.getTaskObserver(creator.day);
+						Date startTimeDate = (Date) startTimeSpinner.getValue();
+						Date endTimeDate = (Date) endTimeSpinner.getValue();
+						taskDay.addTask(
+							(String) taskTypeSelect.getSelectedItem(),
+							textFieldTitle.getText(),
+							textAreaDescription.getText(),
+							LocalTime.of(startTimeDate.getHours(), startTimeDate.getMinutes()),
+							LocalTime.of(endTimeDate.getHours(), endTimeDate.getMinutes())
+						);
+						creator.updateDay(creator.day);
 						
 						dispose();
 					}
