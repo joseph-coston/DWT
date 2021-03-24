@@ -2,6 +2,7 @@ package taskData;
 
 import java.time.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TaskObserver {
 	/** variable definitions **/
@@ -19,6 +20,10 @@ public class TaskObserver {
 		// TODO : make sure task does not collide with any others
 		// TODO : keep list of tasks sorted by time
 		tasks.add(t);
+		Collections.sort(tasks, 
+			(a, b) -> a.start.compareTo(b.start)
+
+			);
 	}
 	
 	public void addTask(String taskType, String title, String description, LocalTime start, LocalTime end) {
@@ -36,6 +41,10 @@ public class TaskObserver {
 				System.out.println("Invalid taskType.");
 			break;
 		}
+		Collections.sort(tasks, 
+				(a, b) -> a.start.compareTo(b.start)
+
+				);
 	}
 	
 	public Task getTaskIndex(int i) {
