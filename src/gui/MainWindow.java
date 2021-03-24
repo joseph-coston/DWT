@@ -8,6 +8,8 @@ public class MainWindow {
 
 	private JFrame frame;
 	public ScheduleView schedule;
+	public TaskView task;
+	public AnalyzeView analyze;
 
 	/**
 	 * Create the application.
@@ -36,6 +38,12 @@ public class MainWindow {
 		
 		schedule = new ScheduleView();
 		tabbedPane.addTab("Schedule", schedule);
+		
+		task = new TaskView();
+		tabbedPane.addTab("Task", task);
+		
+		analyze = new AnalyzeView();
+		tabbedPane.addTab("Analyze", analyze);
 		
 		
 		frame.setVisible(true);	
