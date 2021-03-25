@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_gIdw4I0dEeunPIxuxfAnow" name="NewModel">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6mzmAI0fEeuPA6HeRr2LoA" name="Edit Task">
+    <include xmi:id="_wwTTkI0iEeuPA6HeRr2LoA" addition="_wIXUYI0jEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9CXpgI0fEeuPA6HeRr2LoA" name="Add Task">
+    <generalization xmi:id="_FvvCQI0gEeuPA6HeRr2LoA" general="_6mzmAI0fEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="__JBM8I0fEeuPA6HeRr2LoA" name="Remove Task">
+    <generalization xmi:id="_GQhbII0gEeuPA6HeRr2LoA" general="_6mzmAI0fEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_MaiGUI0gEeuPA6HeRr2LoA" name="User">
+    <eAnnotations xmi:id="_MaitYI0gEeuPA6HeRr2LoA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details xmi:id="_MaitYY0gEeuPA6HeRr2LoA" key="Human"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TAJIYI0gEeuPA6HeRr2LoA" memberEnd="_TAOA4I0gEeuPA6HeRr2LoA _TAOA4Y0gEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_TAOA4I0gEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_TAJIYI0gEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_TAOA4Y0gEeuPA6HeRr2LoA" type="_9CXpgI0fEeuPA6HeRr2LoA" association="_TAJIYI0gEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UiGqYI0gEeuPA6HeRr2LoA" memberEnd="_UiGqYY0gEeuPA6HeRr2LoA _UiGqYo0gEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_UiGqYY0gEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_UiGqYI0gEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_UiGqYo0gEeuPA6HeRr2LoA" type="__JBM8I0fEeuPA6HeRr2LoA" association="_UiGqYI0gEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_WNGzoI0gEeuPA6HeRr2LoA" memberEnd="_WNGzoY0gEeuPA6HeRr2LoA _WNGzoo0gEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_WNGzoY0gEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_WNGzoI0gEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_WNGzoo0gEeuPA6HeRr2LoA" type="_6mzmAI0fEeuPA6HeRr2LoA" association="_WNGzoI0gEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JLor8I0hEeuPA6HeRr2LoA" name="View Task">
+    <include xmi:id="_xaQPgI0iEeuPA6HeRr2LoA" addition="_wIXUYI0jEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_LvCc0I0hEeuPA6HeRr2LoA" name="View Next Task">
+    <generalization xmi:id="_dJ3U8I0hEeuPA6HeRr2LoA" general="_JLor8I0hEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_PxsZ8I0hEeuPA6HeRr2LoA" name="View Previous Task">
+    <generalization xmi:id="_cY5yEI0hEeuPA6HeRr2LoA" general="_JLor8I0hEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yXV_UI0hEeuPA6HeRr2LoA" memberEnd="_yXV_UY0hEeuPA6HeRr2LoA _yXV_Uo0hEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_yXV_UY0hEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_yXV_UI0hEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_yXV_Uo0hEeuPA6HeRr2LoA" type="_LvCc0I0hEeuPA6HeRr2LoA" association="_yXV_UI0hEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_y2dkQI0hEeuPA6HeRr2LoA" memberEnd="_y2dkQY0hEeuPA6HeRr2LoA _y2dkQo0hEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_y2dkQY0hEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_y2dkQI0hEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_y2dkQo0hEeuPA6HeRr2LoA" type="_JLor8I0hEeuPA6HeRr2LoA" association="_y2dkQI0hEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zdZocI0hEeuPA6HeRr2LoA" memberEnd="_zdZocY0hEeuPA6HeRr2LoA _zdZoco0hEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_zdZocY0hEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_zdZocI0hEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_zdZoco0hEeuPA6HeRr2LoA" type="_PxsZ8I0hEeuPA6HeRr2LoA" association="_zdZocI0hEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_-VaT0I0hEeuPA6HeRr2LoA" name="Analyze Daily Performance">
+    <generalization xmi:id="_PtO7QI0iEeuPA6HeRr2LoA" general="_JZo2QI0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_DaLOMI0iEeuPA6HeRr2LoA" name="Analyze Weekly Performance">
+    <generalization xmi:id="_QQwfEI0iEeuPA6HeRr2LoA" general="_JZo2QI0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_GF2KQI0iEeuPA6HeRr2LoA" name="Analyze Monthly Performance">
+    <generalization xmi:id="_QzzhwI0iEeuPA6HeRr2LoA" general="_JZo2QI0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_JZo2QI0iEeuPA6HeRr2LoA" name="Analyze Performance">
+    <include xmi:id="_x8L34I0iEeuPA6HeRr2LoA" addition="_qkOL0I0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZQA5EI0iEeuPA6HeRr2LoA" memberEnd="_ZQA5EY0iEeuPA6HeRr2LoA _ZQA5Eo0iEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_ZQA5EY0iEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_ZQA5EI0iEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_ZQA5Eo0iEeuPA6HeRr2LoA" type="_-VaT0I0hEeuPA6HeRr2LoA" association="_ZQA5EI0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cr7mUI0iEeuPA6HeRr2LoA" memberEnd="_cr7mUY0iEeuPA6HeRr2LoA _cr8NYI0iEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_cr7mUY0iEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_cr7mUI0iEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_cr8NYI0iEeuPA6HeRr2LoA" type="_DaLOMI0iEeuPA6HeRr2LoA" association="_cr7mUI0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dYMPYI0iEeuPA6HeRr2LoA" memberEnd="_dYMPYY0iEeuPA6HeRr2LoA _dYMPYo0iEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_dYMPYY0iEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_dYMPYI0iEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_dYMPYo0iEeuPA6HeRr2LoA" type="_GF2KQI0iEeuPA6HeRr2LoA" association="_dYMPYI0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_qkOL0I0iEeuPA6HeRr2LoA" name="Access DB"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_IURUMI0jEeuPA6HeRr2LoA" name="DWT DB">
+    <eAnnotations xmi:id="_I1ULwI0jEeuPA6HeRr2LoA" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_N90WoI0jEeuPA6HeRr2LoA" memberEnd="_N90WoY0jEeuPA6HeRr2LoA _N909sI0jEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_N90WoY0jEeuPA6HeRr2LoA" type="_IURUMI0jEeuPA6HeRr2LoA" association="_N90WoI0jEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_N909sI0jEeuPA6HeRr2LoA" type="_qkOL0I0iEeuPA6HeRr2LoA" association="_N90WoI0jEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Y-ZIII0jEeuPA6HeRr2LoA" name="Initialize DB">
+    <extend xmi:id="_dXB8UI0jEeuPA6HeRr2LoA" extendedCase="_qkOL0I0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ejS7II0jEeuPA6HeRr2LoA" memberEnd="_ejS7IY0jEeuPA6HeRr2LoA _ejS7Io0jEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_ejS7IY0jEeuPA6HeRr2LoA" type="_IURUMI0jEeuPA6HeRr2LoA" association="_ejS7II0jEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_ejS7Io0jEeuPA6HeRr2LoA" type="_Y-ZIII0jEeuPA6HeRr2LoA" association="_ejS7II0jEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_pJZ-MI0jEeuPA6HeRr2LoA" name="Create User Profile">
+    <include xmi:id="_OY7v4I0kEeuPA6HeRr2LoA" addition="_Y-ZIII0jEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_wIXUYI0jEeuPA6HeRr2LoA" name="Manage Tasks">
+    <include xmi:id="_1rrL8I0jEeuPA6HeRr2LoA" addition="_qkOL0I0iEeuPA6HeRr2LoA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RVOh4I0kEeuPA6HeRr2LoA" memberEnd="_RVOh4Y0kEeuPA6HeRr2LoA _RVOh4o0kEeuPA6HeRr2LoA">
+    <ownedEnd xmi:id="_RVOh4Y0kEeuPA6HeRr2LoA" type="_MaiGUI0gEeuPA6HeRr2LoA" association="_RVOh4I0kEeuPA6HeRr2LoA"/>
+    <ownedEnd xmi:id="_RVOh4o0kEeuPA6HeRr2LoA" type="_pJZ-MI0jEeuPA6HeRr2LoA" association="_RVOh4I0kEeuPA6HeRr2LoA"/>
+  </packagedElement>
+</uml:Model>
